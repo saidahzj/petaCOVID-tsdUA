@@ -3,4 +3,8 @@ pandas
 numpy
 geopandas
 bokeh
-
+requests
+zipfile
+json
+io
+os
