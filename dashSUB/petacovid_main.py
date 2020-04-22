@@ -23,7 +23,7 @@ import pandas as pd  # provides interface for interacting with tabular data
 import geopandas as gpd  # combines the capabilities of pandas and shapely for geospatial operations
 from shapely.geometry import Point, Polygon, MultiPolygon  # for manipulating text data into geospatial shapes
 from shapely import wkt  # stands for "well known text," allows for interchange across GIS programs
-import rtree  # supports geospatial join
+#import rtree  # supports geospatial join
 import os
 import descartes
 import csv
