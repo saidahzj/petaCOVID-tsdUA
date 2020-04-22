@@ -43,23 +43,23 @@ from bokeh.layouts import widgetbox, row, column
 
 #get online shapefile
 
-urlshp = 'https://github.com/ruzcmc/petaCOVID-tsdUA/blob/master/dashSUB/input/Kel_SUB_2017.zip?raw=true'
-local_path = '/content/'
+#urlshp = 'https://github.com/ruzcmc/petaCOVID-tsdUA/blob/master/dashSUB/input/Kel_SUB_2017.zip?raw=true'
+#local_path = '/content/'
 
-r = requests.get(urlshp)
-z = zipfile.ZipFile(io.BytesIO(r.content))
+#r = requests.get(urlshp)
+#z = zipfile.ZipFile(io.BytesIO(r.content))
 
-z.extractall(path=local_path) # extract to folder
-filenames = [y for y in sorted(z.namelist()) for ending in ['dbf', 'prj', 'shp', 'shx'] if y.endswith(ending)] 
-print(filenames)
+#z.extractall(path=local_path) # extract to folder
+#filenames = [y for y in sorted(z.namelist()) for ending in ['dbf', 'prj', 'shp', 'shx'] if y.endswith(ending)] 
+#print(filenames)
 
 #read shapefile dan debugnya
 
-root_path = os.getcwd()
+#root_path = os.getcwd()
 #print(root_path)
+shpfileurl = 'https://raw.githubusercontent.com/ruzcmc/petaCOVID-tsdUA/master/dashSUB/input/Kelurahan_Surabaya_2017.json'
 
-
-puds = gpd.read_file(root_path+'/Kelurahan_Surabaya_2017.shp', crs = {'init' :'epsg:4326'}) #[['name','geometry']]
+puds = gpd.read_file(shpfileurl, crs = {'init' :'epsg:4326'}) #[['name','geometry']]
 
 
 puds.loc[puds.full_id == "r-395152", "is_in_muni"] = "Genteng" #hardcode gantian kecamatan agar sama dgn csv
