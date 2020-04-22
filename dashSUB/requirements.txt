@@ -4,6 +4,3 @@ numpy
 geopandas
 bokeh
 requests
-json
-io
-os
