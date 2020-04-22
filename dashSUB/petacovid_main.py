@@ -25,7 +25,7 @@ from shapely.geometry import Point, Polygon, MultiPolygon  # for manipulating te
 from shapely import wkt  # stands for "well known text," allows for interchange across GIS programs
 #import rtree  # supports geospatial join
 import os
-import descartes
+#import descartes
 import csv
 import json
 import requests
